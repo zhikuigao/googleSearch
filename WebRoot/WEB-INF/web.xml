@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+     <servlet>  
+    <servlet-name>Log4j-init</servlet-name>  
+    <servlet-class>com.jwis.google.servlet.Log4jInit</servlet-class>  
+    <init-param>  
+    <param-name>Log4j-init-file</param-name>  
+    <param-value>WEB-INF/classes/Log4j.properties</param-value>  
+    </init-param>  
+    <load-on-startup>1</load-on-startup>  
+    </servlet>  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>requestSearchDatas</servlet-name>
+    <servlet-class>com.jwis.google.servlet.requestSearchDatas</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>uploadFile</servlet-name>
+    <servlet-class>com.jwis.google.servlet.uploadFile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>requestSearchDatas</servlet-name>
+    <url-pattern>/data.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>uploadFile</servlet-name>
+    <url-pattern>/uploadFile</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
